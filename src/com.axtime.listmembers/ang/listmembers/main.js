@@ -55,7 +55,7 @@
 									var key = obj.contact_id;
 								    crmApi('Contact','get',{contact_id:key}).then(function(result){
                                                 
-												 var c_id = '../contact/view?reset=1&cid='+key;
+												 var c_id = '../civicrm/contact/view?reset=1&cid='+key;
 												 var display_name = result.values[key].display_name;
 												 var start_date = obj.start_date;
 												 var join_date = obj.join_date;
