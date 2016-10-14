@@ -1,0 +1,27 @@
+<div class='root-template' ng-cloak>
+<h1 crm-page-title>List of Membership</h1>
+<div class='filter-wraper'>
+	<p>
+	     <span id='input-wrapper'>Membership From : <input crm-ui-datepicker="{time: false, date: 'dd-mm-yy'}" ng-model='d_filtr.start_date'/> to : <input crm-ui-datepicker="{time: false, date: 'dd-mm-yy'}" ng-model='d_filtr.end_date'/> </span>
+         <a class='button' href='#' id='filtr-btn' ng-click='process($event)'><span><i class="crm-i fa-check"></i> Filter</span></a>
+
+	</p>
+</div>
+<div class='crm-accordion-wrapper'>
+  <div class='crm-accordion-header'>
+    Membership List
+  </div>
+  <div class='crm-accordion-body'>
+     <div class='crm-block crm-form-block crm-form-title-here-form-block'>
+       <table class='m_tab'>
+	     <tr><th><strong>Contact</strong></th><th><strong>Star Date</strong></th><th><strong>Joined at</strong></th></tr>
+	     <tr ng-repeat ='member in members'>
+	       <td><a href={{member.contact_id}}> {{member.name}}</a></td>
+	       <td>{{member.start_date}}</td>
+	       <td>{{member.join_date}}</td>
+		 </tr>
+	   </table>
+     </div>
+   </div>
+</div>
+</div>
